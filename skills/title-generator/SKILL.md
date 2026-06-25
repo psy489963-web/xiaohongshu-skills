@@ -6,19 +6,25 @@ author: 峰哥 (psy489963)
 tags: [小红书, 标题, 创作, 运营, 内容]
 category: 内容创作
 platforms: [xiaohongshu-redskill, openclaw, claude-code, workbuddy]
-install: openclaw skills install @psy489963/xiaohongshu-title-generator
+install: openclaw skills install @psy489963/title-generator
 ---
 
 # 小红书爆款标题生成器
 
 告诉我笔记主题，3秒出可直接发布的标题。
 
+## 安装
+
+```bash
+openclaw skills install @psy489963/title-generator
+```
+
 ## ⚡ 闪电开始
 
 ```
-你：帮我写标题，主题"租房改造500块"
+用户：帮我写标题，主题"租房改造500块"
 
-我：
+助手：
 | # | 标题 | 公式 | 潜力 |
 |---|------|------|:--:|
 | 1 | 500块改造出租屋🏠房东以为花了5千 | 价格锚点 | ★5 |
@@ -96,6 +102,20 @@ install: openclaw skills install @psy489963/xiaohongshu-title-generator
 - ✅ 封面图和标题说的是同一件事吗？
 - ✅ 有1-2个精准Emoji吗？
 - ✅ 正文能和标题的承诺对得上吗？
+
+---
+
+## 五件套闭环
+
+本Skill是「小红书五件套」的第二环。选题→**标题**→文案→封面→复盘，篇篇有进步。
+
+| 环节 | Skill | 命令 |
+|------|-------|------|
+| 上一步 | 选题生成器 | "帮我选题" |
+| **本步** | **标题生成器** | **"帮我写标题"** |
+| 下一步 | 文案优化器 | "帮我优化正文" |
+| 下一步 | 封面设计顾问 | "帮我设计封面" |
+| 效果检验 | 数据复盘器 | "帮我复盘" |
 
 ---
 

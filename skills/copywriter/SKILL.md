@@ -1,9 +1,12 @@
 ---
 name: 小红书文案优化器
 description: 有草稿就优化，没草稿就代写——都能改出爆款体质。4步诊断+10种结构速查，附带AI代写模式。说"帮我优化"或"帮我写一篇"开始。
-version: 0.2
-author: psy489963
-tags: [xiaohongshu, copywriter, content-optimization, 小红书, 文案优化, AI-writing]
+version: 0.2.0
+author: 峰哥 (psy489963)
+tags: [小红书, 文案, 优化, 代写, 内容创作]
+category: 内容创作
+platforms: [xiaohongshu-redskill, openclaw, claude-code, workbuddy]
+install: openclaw skills install @psy489963/copywriter
 ---
 
 # 小红书文案优化器
@@ -247,3 +250,17 @@ openclaw skills install @psy489963/copywriter
 | 故事叙述 | 悬念/冲突 | 时间锚点→波折→转折 | "你们遇到过吗？" |
 | 好物清单 | 人群+场景锁定 | 每款：名字+亮点+价格+适合谁 | "你最爱哪一款？" |
 | 避坑指南 | 踩坑故事+情绪 | 坑①→②→③ + 正确做法 | "你还踩过什么坑？" |
+
+---
+
+## 五件套闭环
+
+本Skill是「小红书五件套」的第三环。选题→标题→**文案**→封面→复盘，篇篇有进步。
+
+| 环节 | Skill | 命令 |
+|------|-------|------|
+| 上一步 | 选题生成器 | "帮我选题" |
+| 上一步 | 标题生成器 | "帮我写标题" |
+| **本步** | **文案优化器** | **"帮我优化"或"帮我写一篇"** |
+| 下一步 | 封面设计顾问 | "帮我设计封面" |
+| 效果检验 | 数据复盘器 | "帮我复盘" |

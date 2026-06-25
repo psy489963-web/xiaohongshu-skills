@@ -6,12 +6,18 @@ author: 峰哥 (psy489963)
 tags: [小红书, 选题, 运营, 需求挖掘, 内容策划, 热搜分析]
 category: 内容创作
 platforms: [xiaohongshu-redskill, openclaw, claude-code, workbuddy]
-install: openclaw skills install @psy489963/xiaohongshu-topic-generator
+install: openclaw skills install @psy489963/topic-generator
 ---
 
 # 小红书选题生成器
 
 三种模式：自动扫近期热搜 / 给你研究蓝图你搜 / 你带数据来我分析。选最适合你的节奏。
+
+## 安装
+
+```bash
+openclaw skills install @psy489963/topic-generator
+```
 
 ---
 
@@ -268,3 +274,17 @@ install: openclaw skills install @psy489963/xiaohongshu-topic-generator
 - 禁用词自动替换：最→保姆级 | 第一→首选 | 100%→几乎全部
 - 禁止纯蹭热点但与赛道无关的选题（不符合的流量不要）
 - 模式C的数据来自公开搜索，仅供参考，强烈建议发布前手动验证
+
+---
+
+## 五件套闭环
+
+本Skill是「小红书五件套」的第一环。**选题**→标题→文案→封面→复盘，篇篇有进步。
+
+| 环节 | Skill | 命令 |
+|------|-------|------|
+| **本步** | **选题生成器** | **"帮我选题"** |
+| 下一步 | 标题生成器 | "帮我写标题" |
+| 下一步 | 文案优化器 | "帮我优化正文" |
+| 下一步 | 封面设计顾问 | "帮我设计封面" |
+| 效果检验 | 数据复盘器 | "帮我复盘" |

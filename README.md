@@ -17,11 +17,11 @@
 
 | Skill | 版本 | 模式 | 安装命令 |
 |-------|:---:|------|------|
-| [选题生成器](./skills/topic-generator/) | v0.3 | 🚀自动/A研究蓝图/B快速分析 | `openclaw skills install @psy489963/xiaohongshu-topic-generator` |
+| [选题生成器](./skills/topic-generator/) | v0.3 | 🚀自动/A研究蓝图/B快速分析 | `openclaw skills install @psy489963/topic-generator` |
 | [爆款标题生成器](./skills/title-generator/) | v0.3 | 12公式直出标题 | `openclaw skills install @psy489963/title-generator` |
 | [文案优化器](./skills/copywriter/) | v0.2 | ✏️代写/🔧优化 | `openclaw skills install @psy489963/copywriter` |
 | [封面设计顾问](./skills/cover-advisor/) | v0.2 | 🤖AI生成/🎨设计顾问 | `openclaw skills install @psy489963/cover-advisor` |
-| [数据复盘器](./skills/data-reviewer/) | v0.1 | 🔍自动采集/✍️手动填数据 | `openclaw skills install @psy489963/xiaohongshu-data-reviewer` |
+| [数据复盘器](./skills/data-reviewer/) | v0.1 | 🔍自动采集/✍️手动填数据 | `openclaw skills install @psy489963/data-reviewer` |
 
 ### 五件套闭环
 
@@ -98,11 +98,11 @@
 
 ```bash
 # 五件套一键安装
-openclaw skills install @psy489963/xiaohongshu-topic-generator
+openclaw skills install @psy489963/topic-generator
 openclaw skills install @psy489963/title-generator
 openclaw skills install @psy489963/copywriter
 openclaw skills install @psy489963/cover-advisor
-openclaw skills install @psy489963/xiaohongshu-data-reviewer
+openclaw skills install @psy489963/data-reviewer
 ```
 
 ## 项目结构

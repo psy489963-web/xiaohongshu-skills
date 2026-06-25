@@ -6,12 +6,18 @@ author: 峰哥 (psy489963)
 tags: [小红书, 数据分析, 复盘, 运营优化, 闭环]
 category: 数据分析
 platforms: [xiaohongshu-redskill, openclaw, claude-code, workbuddy]
-install: openclaw skills install @psy489963/xiaohongshu-data-reviewer
+install: openclaw skills install @psy489963/data-reviewer
 ---
 
 # 小红书数据复盘器
 
 > 五件套最后一块：选题→标题→文案→封面→发布→**数据复盘**→回到选题。闭环跑通，篇篇有进步。
+
+## 安装
+
+```bash
+openclaw skills install @psy489963/data-reviewer
+```
 
 ---
 

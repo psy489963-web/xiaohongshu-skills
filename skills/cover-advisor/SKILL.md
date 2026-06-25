@@ -1,13 +1,20 @@
 ---
 name: 小红书封面设计顾问
 description: 不会设计封面？两个选项：AI直接出图（需标AI生成），或我给你操作指令你自己做（无需标注）。根据需求选。
+version: 0.2.0
+author: 峰哥 (psy489963)
+tags: [小红书, 封面设计, 配图, 视觉, 创作工具]
+category: 内容创作
+platforms: [xiaohongshu-redskill, openclaw, claude-code, workbuddy]
+install: openclaw skills install @psy489963/cover-advisor
 ---
 
 # 小红书封面设计顾问
 
 > 两种方式选一种：要快就 AI 生成，要稳就我给你指令自己做。
 
-**安装**
+## 安装
+
 ```bash
 openclaw skills install @psy489963/cover-advisor
 ```
@@ -245,3 +252,17 @@ openclaw skills install @psy489963/cover-advisor
 - **模式A**：零门槛设计顾问，给可执行指令，无需安装任何软件
 - **模式B**：AI 生成即时出图，标注清晰，合规透明
 - 两种模式都覆盖文案 Skill 没解决的最后一环：封面好不好，决定前面的努力有没有白费
+
+---
+
+## 五件套闭环
+
+本Skill是「小红书五件套」的第四环。选题→标题→文案→**封面**→复盘，篇篇有进步。
+
+| 环节 | Skill | 命令 |
+|------|-------|------|
+| 上一步 | 选题生成器 | "帮我选题" |
+| 上一步 | 标题生成器 | "帮我写标题" |
+| 上一步 | 文案优化器 | "帮我优化正文" |
+| **本步** | **封面设计顾问** | **"帮我设计封面"** |
+| 效果检验 | 数据复盘器 | "帮我复盘" |
