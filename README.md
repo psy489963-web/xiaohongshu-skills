@@ -18,7 +18,7 @@
 | Skill | 版本 | 模式 | 安装命令 |
 |-------|:---:|------|------|
 | [选题生成器](./skills/topic-generator/) | v0.4 | 🚀自动/A研究蓝图/B快速分析 + 五重自检 | `openclaw skills install @psy489963/topic-generator` |
-| [账号包装器](./skills/account-positioner/) | v0.1 | 🔍智能扫描/⚡快速包装 | `openclaw skills install @psy489963/account-positioner` |
+| [账号包装器](./skills/account-positioner/) | v0.2 | 🔍AI搜对标/⚡快速包装 | `openclaw skills install @psy489963/account-positioner` |
 | [爆款标题生成器](./skills/title-generator/) | v0.3 | 12公式直出标题 | `openclaw skills install @psy489963/title-generator` |
 | [文案优化器](./skills/copywriter/) | v0.2 | ✏️代写/🔧优化 | `openclaw skills install @psy489963/copywriter` |
 | [封面设计顾问](./skills/cover-advisor/) | v0.2 | 🤖AI生成/🎨设计顾问 | `openclaw skills install @psy489963/cover-advisor` |
