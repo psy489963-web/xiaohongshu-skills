@@ -1,0 +1,86 @@
+name: Validate Skills
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**/SKILL.md'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'skills/**/SKILL.md'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check SKILL.md files exist
+        run: |
+          echo "=== Skill 文件检查 ==="
+          SKILL_COUNT=$(find skills -name "SKILL.md" | wc -l)
+          echo "发现 ${SKILL_COUNT} 个 SKILL.md"
+          
+          for f in $(find skills -name "SKILL.md"); do
+            echo "检查: $f"
+            # 检查必需字段
+            if ! grep -q "name:" "$f"; then
+              echo "::error file=$f::缺少 name 字段"
+              exit 1
+            fi
+            if ! grep -q "description:" "$f"; then
+              echo "::error file=$f::缺少 description 字段"
+              exit 1
+            fi
+            echo "  ✓ $f 格式正确"
+          done
+
+      - name: Check Markdown format
+        run: |
+          echo "=== Markdown 格式检查 ==="
+          for f in $(find skills -name "SKILL.md"); do
+            echo "验证: $f"
+            # 检查是否有空文件
+            if [ ! -s "$f" ]; then
+              echo "::error file=$f::SKILL.md 为空"
+              exit 1
+            fi
+          done
+          echo "  所有文件检查通过"
+
+      - name: Content policy check
+        run: |
+          echo "=== 内容合规检查 ==="
+          FORBIDDEN_WORDS=("赌博" "色情" "政治敏感" "翻墙" "VPN" "代孕")
+          for f in $(find skills -name "SKILL.md"); do
+            for word in "${FORBIDDEN_WORDS[@]}"; do
+              if grep -qi "$word" "$f"; then
+                echo "::error file=$f::内容包含违规词汇: $word"
+                exit 1
+              fi
+            done
+          done
+          echo "  内容合规检查通过"
+
+  build-index:
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate skills index
+        run: |
+          echo "# Skills 索引" > skills/INDEX.md
+          echo "" >> skills/INDEX.md
+          echo "> 自动生成于 $(date -u +'%Y-%m-%d %H:%M UTC')" >> skills/INDEX.md
+          echo "" >> skills/INDEX.md
+          echo "| Skill | 描述 | 版本 |" >> skills/INDEX.md
+          echo "|-------|------|------|" >> skills/INDEX.md
+          for f in $(find skills -maxdepth 2 -name "SKILL.md" | sort); do
+            DIR=$(dirname "$f" | sed 's|skills/||')
+            NAME=$(grep "^name:" "$f" | head -1 | sed 's/name: *//')
+            DESC=$(grep "^description:" "$f" | head -1 | sed 's/description: *//')
+            VER=$(grep "^version:" "$f" | head -1 | sed 's/version: *//')
+            echo "| [$NAME]($DIR/) | $DESC | $VER |" >> skills/INDEX.md
+          done
