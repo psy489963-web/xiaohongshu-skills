@@ -3,7 +3,7 @@
 > 小红书 AI Skill 开发集合 —— 专注小红书生态的实用 AI 技能包
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Skills](https://img.shields.io/badge/skills-4%20completed-blue)](./skills)
+[![Skills](https://img.shields.io/badge/skills-5%20completed-blue)](./skills)
 
 ---
 
@@ -13,7 +13,7 @@
 
 **核心理念**：一键安装，打开即用，用即有效果。
 
-## 已开发 Skill（4个）
+## 已开发 Skill（5个 — 闭环完成）
 
 | Skill | 版本 | 模式 | 安装命令 |
 |-------|:---:|------|------|
@@ -21,13 +21,29 @@
 | [爆款标题生成器](./skills/title-generator/) | v0.3 | 12公式直出标题 | `openclaw skills install @psy489963/title-generator` |
 | [文案优化器](./skills/copywriter/) | v0.2 | ✏️代写/🔧优化 | `openclaw skills install @psy489963/copywriter` |
 | [封面设计顾问](./skills/cover-advisor/) | v0.2 | 🤖AI生成/🎨设计顾问 | `openclaw skills install @psy489963/cover-advisor` |
+| [数据复盘器](./skills/data-reviewer/) | v0.1 | 🔍自动采集/✍️手动填数据 | `openclaw skills install @psy489963/xiaohongshu-data-reviewer` |
 
-### 四件套联动闭环
+### 五件套闭环
 
 ```
-选题生成器 → 标题生成器 → 文案优化器 → 封面设计顾问
-  (发什么)     (标题怎么写)   (正文怎么写)    (封面怎么做)
+┌─────────────────────────────────────────────────┐
+│                                                   │
+│   选题生成器 → 标题生成器 → 文案优化器 → 封面顾问  │
+│       ↑                                    ↓      │
+│       │                                   发布    │
+│       │                                    ↓      │
+│       └──── 数据复盘器（采集→分析→优化建议）─────┘
+│                                                   │
+└─────────────────────────────────────────────────┘
 ```
+
+| 环节 | Skill | 解决什么 |
+|------|-------|---------|
+| 发什么 | 选题生成器 | 找到有流量的选题方向 |
+| 标题怎么写 | 标题生成器 | 写出高点击率标题 |
+| 正文怎么写 | 文案优化器 | 写出高互动+高收藏正文 |
+| 封面怎么做 | 封面设计顾问 | 做出高点击率封面 |
+| 效果怎么样 | 数据复盘器 | 用数据验证+指导下一轮 |
 
 ---
 
@@ -65,16 +81,28 @@
 
 > ⚠️ 小红书2026年6月起强制AI内容标注。用AI生成模式时发布必须勾选「包含AI生成内容」。
 
+### 📊 数据复盘器（v0.1 — 双模式）
+
+五件套闭环的最后一块：
+
+| 模式 | 方式 | 适合 |
+|------|------|------|
+| 自动采集 | AI通过浏览器抓取后台数据 | WorkBuddy/OpenClaw等支持浏览器的环境 |
+| 手动填数据 | 用户看后台填模板，AI分析 | 任何环境（含RED Skill平台） |
+
+四维分析：流量漏斗（曝光→点击→互动→关注）+ 流量来源 + 内容质量 + 趋势对比。输出复盘报告+优化建议，建议直接联动前4个Skill。
+
 ---
 
 ## 安装方式
 
 ```bash
-# 四件套一键安装
+# 五件套一键安装
 openclaw skills install @psy489963/xiaohongshu-topic-generator
 openclaw skills install @psy489963/title-generator
 openclaw skills install @psy489963/copywriter
 openclaw skills install @psy489963/cover-advisor
+openclaw skills install @psy489963/xiaohongshu-data-reviewer
 ```
 
 ## 项目结构
@@ -85,7 +113,8 @@ xiaohongshu-skills/
 │   ├── topic-generator/    # 选题生成器 v0.3
 │   ├── title-generator/    # 标题生成器 v0.3
 │   ├── copywriter/          # 文案优化器 v0.2
-│   └── cover-advisor/       # 封面设计顾问 v0.2
+│   ├── cover-advisor/       # 封面设计顾问 v0.2
+│   └── data-reviewer/       # 数据复盘器 v0.1
 ├── docs/                    # 项目文档
 ├── .github/workflows/       # CI/CD
 ├── README.md
